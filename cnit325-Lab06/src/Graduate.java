@@ -41,6 +41,22 @@ public class Graduate extends Student
 		this.focus = 0;
 	}
 	
+	// Setters
+	public void setGraduate(String firstName, 
+			   char middleInitial, 
+			   String lastName, 
+			   String PUID, 
+			   String Address, 
+			   String State, 
+			   String zipCode, 
+			   String country, 
+			   String major, 
+			   boolean thesis, 
+			   int focus)
+	{
+		
+	}
+	
 	// Getters
 	public String getMajor()
 	{
