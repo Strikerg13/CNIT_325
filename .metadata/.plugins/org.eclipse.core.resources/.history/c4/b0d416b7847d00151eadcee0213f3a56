@@ -31,7 +31,7 @@ public class StudentRecordDatabase extends JFrame
 	private JTextField txtState;
 	
 	private String studentType = "";
-	private Student student;
+	Student student = new Student();
 
 	/**
 	 * Launch the application.
@@ -52,8 +52,6 @@ public class StudentRecordDatabase extends JFrame
 				}
 			}
 		});
-		
-		
 	}
 
 	/**
@@ -303,7 +301,7 @@ public class StudentRecordDatabase extends JFrame
 		mntmUndergrad.addActionListener(new ActionListener() {	// Create New Undergrad
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				student = new Undergrad();
+				undergrad = new Undergrad();
 				
 				studentType = "undergrad";
 				
@@ -323,7 +321,7 @@ public class StudentRecordDatabase extends JFrame
 		mntmGraduate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) 
 			{
-				student = new Graduate();
+				grad = new Graduate();
 				
 				studentType = "graduate";
 				
@@ -349,7 +347,7 @@ public class StudentRecordDatabase extends JFrame
 				switch(studentType)
 				{
 				case "undergrad":
-					student.setStudent(txtFirstName.getText(), 
+					undergrad.setStudent(txtFirstName.getText(), 
 										 txtMiddleInitial.getText().charAt(0), 
 										 txtLastName.getText(), 
 										 txtPUID.getText(), 
@@ -360,7 +358,6 @@ public class StudentRecordDatabase extends JFrame
 					break;
 					
 				case "graduate":
-					student = (Graduate)student;
 					
 					break;
 				}
